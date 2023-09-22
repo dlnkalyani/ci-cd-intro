@@ -66,7 +66,7 @@ resource "aws_instance" "staging_cicd_demo" {
   # both will change together.
   ami                    = random_id.server.keepers.ami_id
   instance_type          = "t2.micro"
-  vpc_security_group_ids = ["${var.base_ami_id}"]
+  vpc_security_group_ids = ["${var.seurity_group_id}"]
   key_name               = aws_key_pair.staging_key.key_name
 
   tags = {
