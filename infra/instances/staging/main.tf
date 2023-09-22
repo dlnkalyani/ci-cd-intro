@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    organization = "glich-stream"
+    organization = "dlnkalyaniorg"
 
     workspaces {
-      name = "ci-cd-staging"
+      name = "demo-github-actions"
     }
   }
 
@@ -24,7 +24,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "eu-west-1"
+  region  = "us-east-1"
 }
 
 variable "staging_public_key" {
