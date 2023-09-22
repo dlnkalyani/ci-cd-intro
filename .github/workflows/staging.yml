@@ -39,6 +39,7 @@ jobs:
             repo: context.repo.repo,
             pull_number: ${{ github.event.inputs.PR_number }}
           });
+          echo "${{ github.event.inputs.PR_number }}      ${{ secrets.GITHUB_TOKEN }} "
           
           // Check if the pull request is open
           if (response.data.number !== ${{ github.event.inputs.PR_number }}) {
